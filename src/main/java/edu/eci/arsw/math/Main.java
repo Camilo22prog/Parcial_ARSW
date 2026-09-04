@@ -1,8 +1,4 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package edu.eci.arsw.math;
 
 import java.util.Arrays;
@@ -13,13 +9,15 @@ import java.util.Arrays;
  */
 public class Main {
 
+
     public static void main(String a[]) {
         System.out.println(bytesToHex(PiDigits.getDigits(0, 10)));
         System.out.println(bytesToHex(PiDigits.getDigits(1, 100)));
         System.out.println(bytesToHex(PiDigits.getDigits(1, 1000000)));
+        System.out.println(new LiveThread(2,8));
     }
 
-    private final static char[] hexArray = "0123456789ABCDEF".toCharArray();
+    private final static char[] hexArray = "0123456789ABC DEF".toCharArray();
 
     public static String bytesToHex(byte[] bytes) {
         char[] hexChars = new char[bytes.length * 2];
@@ -30,7 +28,7 @@ public class Main {
         }
         StringBuilder sb=new StringBuilder();
         for (int i=0;i<hexChars.length;i=i+2){
-            //sb.append(hexChars[i]);
+            sb.append(hexChars[i]);
             sb.append(hexChars[i+1]);            
         }
         return sb.toString();
